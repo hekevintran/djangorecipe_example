@@ -13,4 +13,4 @@ Run tests:
 
 ::
 
-    bin/manage test stub_app -v 2
+    $ bin/manage test stub_app -v 2
