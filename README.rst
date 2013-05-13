@@ -12,8 +12,15 @@ To run this project do:
 
 Navigate to http://localhost:8000/admin and log in.
 
-Run tests:
+Run all tests:
 
 ::
 
     $ bin/manage test stub_app -v 2
+
+
+Run a test by name:
+
+::
+
+    $ bin/manage test --select-tests=test_basic_addition

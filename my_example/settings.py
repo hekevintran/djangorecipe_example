@@ -2,6 +2,11 @@ import os
 
 PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
 
+# Do not use South during tests
+SOUTH_TESTS_MIGRATE = False
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+NOSE_ARGS = ['--nologcapture', '--detailed-errors', '--with-id']
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -124,6 +129,12 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
+
+    'south',
+    # django_nose must come *after* south so that django_nose's test command is
+    # used
+    'django_nose',
+
     'stub_app',
 )
 
