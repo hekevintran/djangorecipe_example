@@ -2,6 +2,9 @@ To run this project do:
 
 ::
 
+    $ cd djangorecipe_example/
+    $ virtualenv --no-site-packages --distribute .
+    $ source bin/activate
     $ python bootstrap.py
     $ bin/buildout
     $ bin/manage syncdb
